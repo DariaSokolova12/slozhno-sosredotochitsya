@@ -6,7 +6,10 @@
   --accent-color: #FF0070;
   --accent-title: #DB00FF;
   --bk-color:#000028;
-  --accent-text-header: #000028;
+  --text-color:#000028;
+  --paragraph_text: #F1B2CE;
+  --title_text:var(--accent-color);
+  --button-color:var(--accent-color);
   --cover-image: url(../images/cover-image-dark.png);
   --accent-font: 'IBM Plex Mono';
   --font-size: 18px;
