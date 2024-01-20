@@ -12,13 +12,11 @@
   background-attachment: fixed;
 }
 
-
 .header {
   position: relative;
   padding: 10px;
   min-height: 668px;
 }
-
 
 .rec_icon {
   position: absolute;
@@ -45,7 +43,6 @@
   background-color: var(--accent-color);
 }
 
-
 .decorated-zone::before {
   content: '';
   position: absolute;
@@ -68,13 +65,11 @@
   inline-size: 25px;
   bottom: 10px;
   left: 10px;
-
 }
 
 .header__theme-menu {
   padding-top: 65px; 
 }
-
 
 .header__theme-menu-list { 
   display: flex;
@@ -82,7 +77,6 @@
   align-items: end;
   gap: 10px;
 }
-
 
 .header__theme-menu-item {
   color: var(--button-color);
@@ -101,7 +95,6 @@
   text-align: center;
   border: none;
 }
-
 
 .header__theme-menu-button_active {
   border: 1px solid  var(--button-color);
@@ -138,7 +131,6 @@
   flex-direction: column;
 }
 
-
 .title {
   color: var(--accent-title);
   text-shadow: 4px 4px 0px var(--accent-color);
@@ -147,7 +139,6 @@
   font-weight: 700;
   line-height: 82.5%;
 }
-
 
 .title-decor {
   background-color: var(--accent-color);
@@ -162,11 +153,9 @@
   max-inline-size: 364px;    
 }
 
-
 .main {
   background-color: var(--bk-color);
 }
-
 
 .title_content {
   color: var(--title_text);
@@ -175,7 +164,6 @@
   font-weight: 700;
   line-height: 130%;
 }
-
 
 .paragraph {
   color: var(--paragraph_text);
@@ -191,15 +179,15 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.card-text-link:hover {
+.link:hover {
   border-bottom: 1px solid var(--paragraph_text);
 }
 
-.card-text-link:focus {
+.link:focus {
   outline: none;
 }
 
-.card-text-link:focus-visible {
+.link:focus-visible {
   outline: 1px solid var(--paragraph_text);
 }
 
@@ -210,7 +198,6 @@
   font-weight: 400;
   line-height: 130% ;
 }
-
 
 .section_article_images {
   display: grid;
@@ -226,7 +213,6 @@
   object-position: center;
 }
 
-
 .footer {
   position: relative;
   background-color: var(--bk-color);
@@ -235,8 +221,7 @@
   align-items: center;
   height: 100vh;
 }
-  
-  
+
 .footer__title {
   color: var(--accent-title);
   font-weight: 700;
@@ -289,11 +274,9 @@
     padding-top: 147px;
   }
   
-
   .title {
     margin-inline-start: -20px;
   }
-
 
   .container {
     gap: 162px;
@@ -369,12 +352,10 @@
     padding-top: 20px; 
   }
 
-
   .header__theme-menu-list {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
   }
 
   .container {
