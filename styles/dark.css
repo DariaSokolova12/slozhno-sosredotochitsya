@@ -5,6 +5,7 @@
 */
 
 .page.theme_dark {
+    --shadow_title:var(--accent-color);
     --accent-color: #FF0070;
     --accent-title: #DB00FF;
     --bk-color:#000028;

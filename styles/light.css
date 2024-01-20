@@ -5,6 +5,7 @@
 */
 
 .page.theme_light {
+  --shadow_title:#FF0070;
   --accent-color: #ff8dcb;
   --accent-title: #ffc2e6;
   --bk-color:#fff1f7;
@@ -19,6 +20,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+  --shadow_title:#FF0070;
   --accent-color: #ff8dcb;
   --accent-title: #ffc2e6;
   --bk-color:#fff1f7;
