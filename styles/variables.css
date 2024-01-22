@@ -14,4 +14,7 @@
   --cover-image: url(../images/cover-image-dark.png);
   --accent-font: 'IBM Plex Mono';
   --font-size: 18px;
+  --font-size_title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --hover-color: rgba(255, 0, 112, 0.40);
+  --display-rec: flex;
 }

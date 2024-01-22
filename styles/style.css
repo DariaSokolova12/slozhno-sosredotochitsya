@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--accent-color);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), monospace;
   background: var(--cover-image);
   background-color: var(--bk-color);
   background-repeat: no-repeat;
@@ -14,8 +14,11 @@
 
 .header {
   position: relative;
-  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
   min-height: 668px;
+  padding: 10px;
+  height: 100vh;
 }
 
 .rec_icon {
@@ -28,6 +31,7 @@
   font-style: normal;
   line-height: 25px;
   text-transform: uppercase;
+  display: var(--display-rec);
 }
 
 .rec_icon::after {
@@ -41,6 +45,7 @@
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
   background-color: var(--accent-color);
+  display: var(--display-rec);
 }
 
 .decorated-zone::before {
@@ -67,15 +72,15 @@
   left: 10px;
 }
 
-.header__theme-menu {
-  padding-top: 65px; 
-}
 
 .header__theme-menu-list { 
   display: flex;
   flex-direction: column;
+  grid-column: 2 / -2;
+  grid-row: 1;
+  justify-content: center;
   align-items: end;
-  gap: 10px;
+  gap: 13px;
 }
 
 .header__theme-menu-item {
@@ -91,27 +96,21 @@
   background-color: transparent;
   padding: 0 13px 0;
   display: inline-flex;
-  height: 26px;
+  min-height: 26px;
   text-align: center;
   border: none;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid  var(--button-color);
   padding: 0 13px 0;
-  display: inline-flex;
-  height: 26px;
-  text-align: center;
   flex-shrink: 0;
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--button-color);
-  padding: 0 13px 0;
-  display: inline-flex;
-  height: 26px;
-  text-align: center;
+  outline: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -120,10 +119,6 @@
 
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--button-color);
-  padding: 0 13px 0;
-  display: inline-flex;
-  height: 26px;
-  text-align: center;
 }
 
 .container {
@@ -132,9 +127,12 @@
 }
 
 .title {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  margin-left: -2%;
   color: var(--accent-title);
   text-shadow: 4px 4px 0px var(--accent-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--font-size_title);
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
@@ -150,11 +148,10 @@
 }
 
 .section_content {
-  max-inline-size: 364px;    
-}
-
-.main {
-  background-color: var(--bk-color);
+  grid-column: 3;
+  grid-row: 3;
+  align-self: flex-end;
+  font-weight: 700;    
 }
 
 .title_content {
@@ -215,6 +212,7 @@
 
 .footer {
   position: relative;
+  min-height: 668px;
   background-color: var(--bk-color);
   display: flex;
   justify-content: center;
@@ -225,13 +223,18 @@
 .footer__title {
   color: var(--accent-title);
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--font-size_title);
   text-shadow: 2px 2px 0px var(--accent-color);
   }
 
 @media screen and (max-width:767px) {
-  .title {
-    padding: 65px 0 55px;
+  .container {
+    margin-block-start: 68px;
+    gap: 55px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 73px ;
   }
 
   .content_section {
@@ -271,32 +274,24 @@
   }
   
   .header__theme-menu {
-    padding-top: 147px;
+    margin-block-start: 190px;
   }
   
   .title {
-    margin-inline-start: -20px;
+    justify-self: start;
   }
 
   .container {
     gap: 162px;
     display: grid;
-    padding-top: 173px;
     font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-  
-  .section_content {
-    justify-self: end;
   }
 
   .content_section {
     display: grid;
+    grid-template-columns: 236px 1fr 1fr;
     padding: 60px 20px 0;
     gap: 20px;
-  }
-  
-  .content_section {
-    grid-template-columns: 236px 1fr 1fr;
   }
   
   .section .main_content,
@@ -348,8 +343,8 @@
    min-height: 768px;
   }
 
-  .header__theme-menu {
-    padding-top: 20px; 
+  .header__theme-menu { 
+    margin-block-start: 20px;
   }
 
   .header__theme-menu-list {
@@ -360,20 +355,15 @@
 
   .container {
     gap: 114px;
-    padding-top: 273px;
   }
 
   .title {
-    color: var(--accent-title);
     text-shadow: 4px 4px 0px var(--shadow_title);
-    font-size: clamp(7.25rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 82.5%;
   }
 
   .section_content {
-    min-width: 491px;
+    width: 491px;
+    justify-self: end;
   }
 
   .content_section {
